@@ -2,6 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@vitejs/plugin-vue': 3.0.0-beta.0
+  prettier: ^2.7.1
   typescript: ^4.7.4
   vite: 3.0.0-beta.2
   vue: ^3.2.37
@@ -12,6 +13,7 @@ dependencies:
 
 devDependencies:
   '@vitejs/plugin-vue': 3.0.0-beta.0_rygeznqqb23s3dco2gmne6jfdm
+  prettier: 2.7.1
   typescript: 4.7.4
   vite: 3.0.0-beta.2
   vue-tsc: 0.38.1_typescript@4.7.4
@@ -413,6 +415,12 @@ packages:
       nanoid: 3.3.4
       picocolors: 1.0.0
       source-map-js: 1.0.2
+
+  /prettier/2.7.1:
+    resolution: {integrity: sha512-ujppO+MkdPqoVINuDFDRLClm7D78qbDt0/NR+wp5FqEZOoTNAjPHWj17QRhu7geIHJfcNhRk1XVQmF8Bp3ye+g==}
+    engines: {node: '>=10.13.0'}
+    hasBin: true
+    dev: true
 
   /resolve/1.22.1:
     resolution: {integrity: sha512-nBpuuYuY5jFsli/JIs1oldw6fOQCBioohqWZg/2hiaOybXOft4lonv85uDOKXdf8rhyK159cxU5cDcK/NKk8zw==}
