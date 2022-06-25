@@ -1,3 +1,13 @@
-import Button from "./components/button/index.vue";
+import type { App } from "vue";
+import * as components from "./components";
+import { forIn } from "lodash-es";
 
-export { Button as ESButton };
+const createES = () => ({
+  install: (app: App) => {
+    forIn(components, component => {
+      app.component(component.name, component);
+    });
+  },
+});
+
+export { createES };
