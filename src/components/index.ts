@@ -1,1 +1,1 @@
-export { default as ESButton } from "./button/index.vue";
+export * from "./button";

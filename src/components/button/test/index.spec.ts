@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { render } from "@testing-library/vue";
-import Button from "../index.vue";
+import Button from "../Button.vue";
 
 describe("test", () => {
   it("should be 2", () => {
