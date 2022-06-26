@@ -1,3 +1,4 @@
+/// <reference types="vitest" />
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import { resolve } from "path";
@@ -5,6 +6,13 @@ import { resolve } from "path";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue()],
+  test: {
+    environment: "happy-dom",
+  },
+  server: {
+    port: 9527,
+    host: "0.0.0.0",
+  },
   build: {
     lib: {
       entry: resolve(__dirname, "src/index.ts"),
@@ -18,6 +26,11 @@ export default defineConfig({
           vue: "Vue",
         },
       },
+    },
+  },
+  resolve: {
+    alias: {
+      "@": resolve(__dirname, "src"),
     },
   },
 });
