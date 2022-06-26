@@ -17,12 +17,12 @@
     "@testing-library/vue": "^6.6.0",
     "@types/lodash-es": "^4.17.6",
     "@types/node": "^18.0.0",
-    "@vitejs/plugin-vue": "3.0.0-beta.0",
+    "@vitejs/plugin-vue": "^2.3.3",
     "c8": "^7.11.3",
     "happy-dom": "^5.3.2",
     "prettier": "^2.7.1",
     "typescript": "^4.7.4",
-    "vite": "3.0.0-beta.2",
+    "vite": "^2.9.12",
     "vitest": "^0.16.0",
     "vue-tsc": "^0.38.1"
   }
