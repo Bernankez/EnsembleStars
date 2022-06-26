@@ -1,6 +1,8 @@
 {
   "name": "es-ui",
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "description": "An EnsembleStars Style UI Components Library built on Vue3",
+  "license": "MIT",
   "main": "dist/es-ui.umd.js",
   "module": "dist/es-ui.es.js",
   "exports": {
@@ -48,5 +50,8 @@
     "vitepress": "1.0.0-alpha.4",
     "vitest": "^0.16.0",
     "vue-tsc": "^0.38.1"
+  },
+  "peerDependencies": {
+    "vue": "^3.0.0"
   }
 }
