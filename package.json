@@ -17,10 +17,13 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build && npm run type",
-    "preview": "vite preview",
     "type": "node ./src/scripts/import-type.js",
+    "preview": "vite preview",
     "test": "vitest",
-    "coverage": "vitest run --coverage"
+    "coverage": "vitest run --coverage",
+    "docs": "vitepress dev src/docs",
+    "docs:build": "vitepress build src/docs",
+    "docs:serve": "vitepress serve src/docs"
   },
   "dependencies": {
     "lodash-es": "^4.17.21",
@@ -42,6 +45,7 @@
     "typescript": "^4.7.4",
     "vite": "^2.9.12",
     "vite-plugin-dts": "^1.2.0",
+    "vitepress": "1.0.0-alpha.4",
     "vitest": "^0.16.0",
     "vue-tsc": "^0.38.1"
   }
