@@ -2,6 +2,7 @@
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import dts from "vite-plugin-dts";
+import rollupDelete from "rollup-plugin-delete";
 import { resolve } from "path";
 
 // https://vitejs.dev/config/
@@ -34,6 +35,13 @@ export default defineConfig({
           vue: "Vue",
         },
       },
+      plugins: [
+        rollupDelete({
+          targets: "dist/*.{ico,txt}",
+          verbose: true,
+          hook: "generateBundle",
+        }),
+      ],
     },
   },
   resolve: {
