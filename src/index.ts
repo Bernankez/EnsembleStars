@@ -1,6 +1,6 @@
 import type { App } from "vue";
 import * as components from "./components";
-import "./style/index.css";
+import "./styles/index.css";
 import { forIn } from "lodash-es";
 
 const createES = () => ({
