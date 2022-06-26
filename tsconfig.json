@@ -11,6 +11,7 @@
     "isolatedModules": true,
     "esModuleInterop": true,
     "lib": ["esnext", "dom"],
+    "declaration": true,
     "skipLibCheck": true,
     "baseUrl": "./",
     "paths": {
