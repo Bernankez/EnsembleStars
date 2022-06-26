@@ -11,4 +11,5 @@ const createES = () => ({
   },
 });
 
-export { createES, components };
+export * from "./components";
+export { createES };
