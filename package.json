@@ -1,5 +1,5 @@
 {
-  "name": "ensemble-stars",
+  "name": "es-ui",
   "version": "0.0.0",
   "main": "dist/es-ui.umd.js",
   "module": "dist/es-ui.es.js",
@@ -9,6 +9,9 @@
       "require": "./dist/es-ui.umd.js"
     }
   },
+  "files": [
+    "dist"
+  ],
   "types": "dist/index.d.ts",
   "scripts": {
     "dev": "vite",
@@ -37,8 +40,5 @@
     "vite-plugin-dts": "^1.2.0",
     "vitest": "^0.16.0",
     "vue-tsc": "^0.38.1"
-  },
-  "files": [
-    "dist"
-  ]
+  }
 }
