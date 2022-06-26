@@ -10,4 +10,4 @@ const createES = () => ({
   },
 });
 
-export { createES };
+export { createES, components };
