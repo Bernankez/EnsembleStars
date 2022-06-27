@@ -17,15 +17,22 @@
   ],
   "types": "dist/index.d.ts",
   "scripts": {
+    "prepare": "husky install",
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build && npm run type",
     "type": "node ./src/scripts/import-type.js",
     "preview": "vite preview",
     "test": "vitest",
+    "test:once": "vitest run",
     "coverage": "vitest run --coverage",
     "docs": "vitepress dev src/docs",
     "docs:build": "vitepress build src/docs",
     "docs:serve": "vitepress serve src/docs"
+  },
+  "lint-staged": {
+    "src/components/**/*.{js,jsx,ts,tsx,vue}": [
+      "prettier --write"
+    ]
   },
   "dependencies": {
     "lodash-es": "^4.17.21",
@@ -39,6 +46,8 @@
     "autoprefixer": "^10.4.7",
     "c8": "^7.11.3",
     "happy-dom": "^5.3.2",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.0.3",
     "postcss": "^8.4.14",
     "prettier": "^2.7.1",
     "rollup-plugin-delete": "^2.0.0",
