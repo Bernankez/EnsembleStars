@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+// theme color
+$es-color-primary: #1e40af;
+$es-color-highlight: #fcf050;
+$es-color-disable: #c0c0c0;
+// text color
+$es-text-color: #1e3a8a;
+$es-text-dark: #333;
+$es-text-gray: #6b7280;
+// background color
+$es-bg-color: #fff;
+// opacity
+$es-opacity-hover: 0.05;
+$es-opacity-active: 0.1;
+// dark-mode color
+$es-dark-text: #fff;
+$es-dark-bg: #18181c;
