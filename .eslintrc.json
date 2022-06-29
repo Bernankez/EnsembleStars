@@ -7,11 +7,18 @@
     "node": true
   },
   "extends": ["eslint:recommended", "plugin:vue/vue3-essential", "plugin:@typescript-eslint/recommended", "prettier"],
+  // ref: https://github.com/vuejs/eslint-config-typescript/blob/e7e184c/index.js
+  "parser": "vue-eslint-parser",
   "parserOptions": {
     "ecmaVersion": "latest",
     "parser": "@typescript-eslint/parser",
+    "extraFileExtensions": [".vue"],
     "sourceType": "module"
   },
   "plugins": ["vue", "@typescript-eslint"],
-  "rules": {}
+  "rules": {
+    // The core 'no-unused-vars' rules (in the eslint:recommeded ruleset)
+    // does not work with type definitions
+    "no-unused-vars": "off"
+  }
 }
