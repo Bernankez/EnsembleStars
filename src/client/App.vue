@@ -1,6 +1,5 @@
 <template>
-  Hello, World.
-  <ESButton />
+  <ESButton>testButton</ESButton>
 </template>
 
 <script setup lang="ts"></script>
