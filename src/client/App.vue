@@ -4,6 +4,7 @@
       >卡片
       <template v-slot:reference>CARD</template>
     </ESButton>
+    <ESIcon></ESIcon>
   </ESConfigProvider>
 </template>
 

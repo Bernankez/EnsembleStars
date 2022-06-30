@@ -1,4 +1,4 @@
-import type { PropType } from "vue";
+import type { ExtractPropTypes, PropType } from "vue";
 
 export const buttonProps = {
   text: {
@@ -31,7 +31,7 @@ export const buttonProps = {
   },
 };
 
-export type ButtonProps = typeof buttonProps;
+export type ButtonProps = ExtractPropTypes<typeof buttonProps>;
 
 export type ButtonTypeKey = "primary" | "half-rounded" | "half-rounded-op" | "rounded";
 

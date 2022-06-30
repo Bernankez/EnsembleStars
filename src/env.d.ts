@@ -1,5 +1,7 @@
 /// <reference types="vite/client" />
 export * from "./components/button/types";
+export * from "./components/config-provider/types";
+export * from "./components/icon/types";
 
 declare module "*.vue" {
   import type { DefineComponent } from "vue";
