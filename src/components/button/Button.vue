@@ -25,8 +25,8 @@ import { assign } from "lodash-es";
 const [name, bem] = createNamespace("button");
 
 const props = defineProps(buttonProps);
-
-const dark = computed(() => props.dark ?? inject(Dark, false));
+const _inject_dark = inject(Dark);
+const dark = computed(() => props.dark ?? unref(_inject_dark));
 const theme = computed(() => assign({}, buttonTheme.default, buttonTheme[props.theme], unref(dark) ? buttonTheme.dark : {}, props.customTheme));
 const type = computed(() => assign({}, buttonType.primary, buttonType[props.type]));
 const width = computed(() => (props.block ? { width: "100%" } : { width: "auto" }));

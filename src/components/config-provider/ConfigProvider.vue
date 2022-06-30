@@ -8,11 +8,14 @@ export default {
 };
 </script>
 <script setup lang="ts">
-import { provide } from "vue";
+import { provide, computed } from "vue";
 import { configProviderProps } from "@/components/config-provider/types";
 import { Dark } from "@/types";
 
 const props = defineProps(configProviderProps);
 
-provide(Dark, props.dark);
+provide(
+  Dark,
+  computed(() => props.dark)
+);
 </script>

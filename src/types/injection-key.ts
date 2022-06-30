@@ -1,3 +1,3 @@
-import type { InjectionKey } from "vue";
+import type { InjectionKey, ComputedRef } from "vue";
 
-export const Dark: InjectionKey<boolean> = Symbol("Dark");
+export const Dark: InjectionKey<ComputedRef<boolean>> = Symbol("Dark");
