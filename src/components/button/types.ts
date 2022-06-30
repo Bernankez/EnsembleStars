@@ -27,6 +27,7 @@ export const buttonProps = {
   },
   dark: {
     type: Boolean,
+    default: undefined,
   },
 };
 
