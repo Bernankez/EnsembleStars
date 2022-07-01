@@ -1,17 +1,12 @@
-import type { App, Plugin } from "vue";
 import * as components from "./packages";
+import { createES } from "./utils";
 import "./styles/index.scss";
-import { forIn } from "lodash-es";
 
-const createES = () => ({
-  install: (app: App) => {
-    forIn(components, (component, key) => {
-      if (!key.startsWith("_")) {
-        app.use(component as Plugin);
-      }
-    });
-  },
+const es = createES({
+  components: Object.keys(components).map(key => components[key as keyof typeof components]),
 });
 
-export * from "./packages";
+export default es;
+export const install = es.install;
 export { createES };
+export * from "./packages";

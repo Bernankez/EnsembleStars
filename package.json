@@ -1,10 +1,11 @@
 {
   "name": "es-ui",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "An EnsembleStars Style UI Component Library built on Vue3",
   "license": "MIT",
   "main": "dist/es-ui.umd.js",
   "module": "dist/es-ui.es.js",
+  "types": "dist/index.d.ts",
   "exports": {
     ".": {
       "import": "./dist/es-ui.es.js",
@@ -13,14 +14,13 @@
     "./dist/style.css": "./dist/style.css"
   },
   "files": [
-    "dist"
+    "dist",
+    "volar.d.ts"
   ],
-  "types": "dist/index.d.ts",
   "scripts": {
     "prepare": "husky install",
     "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build && npm run type",
-    "type": "node ./src/scripts/import-type.js",
+    "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
     "test": "vitest",
     "test:once": "vitest run",

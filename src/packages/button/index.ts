@@ -1,6 +1,2 @@
-import { withInstall } from "@/utils";
-import Button from "./Button.vue";
-
-export const ESButton = withInstall(Button);
-
-export const _ESButton = Button;
+export { default as ESButton } from "./Button.vue";
+export type { ButtonProps } from "./types";

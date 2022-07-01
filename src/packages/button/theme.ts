@@ -19,7 +19,7 @@ export const buttonTheme: Record<ButtonThemeKey, ButtonTheme> = {
     backgroundColor: Theme.ESDarkBg,
     borderColor: Theme.ESDarkPrimary,
   },
-};
+} as const;
 
 export const buttonType: Record<ButtonTypeKey, ButtonType> = {
   primary: {
@@ -34,4 +34,4 @@ export const buttonType: Record<ButtonTypeKey, ButtonType> = {
   rounded: {
     borderRadius: "0.75rem",
   },
-};
+} as const;

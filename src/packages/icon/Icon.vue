@@ -6,7 +6,7 @@
 
 <script lang="ts">
 export default {
-  name: "ESIcon",
+  name: "Icon",
 };
 </script>
 <script setup lang="ts">

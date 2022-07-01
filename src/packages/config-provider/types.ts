@@ -3,6 +3,6 @@ export const configProviderProps = {
     type: Boolean,
     default: false,
   },
-};
+} as const;
 
 export type ConfigProviderProps = typeof configProviderProps;

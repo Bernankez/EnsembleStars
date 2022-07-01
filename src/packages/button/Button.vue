@@ -11,23 +11,25 @@
 
 <script lang="ts">
 export default {
-  name: "ESButton",
+  name: "Button",
 };
 </script>
 <script setup lang="ts">
 import { computed, inject, unref } from "vue";
-import { buttonProps } from "es-ui/button/types";
+import { assign } from "lodash-es";
 import { Dark } from "@/types";
+import { buttonProps } from "./types";
 import { createNamespace } from "@/utils";
 import { buttonTheme, buttonType } from "./theme";
-import { assign } from "lodash-es";
 
 const [name, bem] = createNamespace("button");
 
 const props = defineProps(buttonProps);
-const _inject_dark = inject(Dark);
+const _inject_dark = inject(Dark, undefined);
 const dark = computed(() => props.dark ?? unref(_inject_dark));
-const theme = computed(() => assign({}, buttonTheme.default, buttonTheme[props.theme], unref(dark) ? buttonTheme.dark : {}, props.customTheme));
+const theme = computed(() =>
+  assign({}, buttonTheme.default, buttonTheme[props.theme], unref(dark) ? buttonTheme.dark : {}, props.customTheme)
+);
 const type = computed(() => assign({}, buttonType.primary, buttonType[props.type]));
 const width = computed(() => (props.block ? { width: "100%" } : { width: "auto" }));
 const styles = computed(() => assign({}, unref(theme), unref(type), unref(width)));

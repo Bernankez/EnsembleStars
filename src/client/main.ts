@@ -1,8 +1,7 @@
 import { createApp } from "vue";
 import App from "./App.vue";
-import { createES } from "..";
+import es from "@/index";
 
 const app = createApp(App);
-const es = createES();
 app.use(es);
 app.mount("#app");

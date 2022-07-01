@@ -29,7 +29,7 @@ export const buttonProps = {
     type: Boolean,
     default: undefined,
   },
-};
+} as const;
 
 export type ButtonProps = ExtractPropTypes<typeof buttonProps>;
 

@@ -4,13 +4,13 @@
 
 <script lang="ts">
 export default {
-  name: "ESConfigProvider",
+  name: "ConfigProvider",
 };
 </script>
 <script setup lang="ts">
 import { provide, computed } from "vue";
-import { configProviderProps } from "es-ui/config-provider/types";
 import { Dark } from "@/types";
+import { configProviderProps } from "./types";
 
 const props = defineProps(configProviderProps);
 

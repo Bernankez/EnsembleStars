@@ -1,6 +1,6 @@
 <template>
   <ESConfigProvider dark>
-    <ESButton theme="highlight" type="half-rounded"
+    <ESButton dark theme="default" type="primary"
       >卡片
       <template v-slot:reference>CARD</template>
     </ESButton>
@@ -8,4 +8,8 @@
   </ESConfigProvider>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { ESButton } from "es-ui";
+
+console.log(ESButton.name);
+</script>
