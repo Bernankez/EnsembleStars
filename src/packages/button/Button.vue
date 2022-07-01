@@ -16,7 +16,7 @@ export default {
 </script>
 <script setup lang="ts">
 import { computed, inject, unref } from "vue";
-import { buttonProps } from "@/components/button/types";
+import { buttonProps } from "@/packages/button/types";
 import { Dark } from "@/types";
 import { createNamespace } from "@/utils";
 import { buttonTheme, buttonType } from "./theme";

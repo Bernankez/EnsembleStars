@@ -9,7 +9,7 @@ export default {
 </script>
 <script setup lang="ts">
 import { provide, computed } from "vue";
-import { configProviderProps } from "@/components/config-provider/types";
+import { configProviderProps } from "@/packages/config-provider/types";
 import { Dark } from "@/types";
 
 const props = defineProps(configProviderProps);

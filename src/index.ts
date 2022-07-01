@@ -1,5 +1,5 @@
 import type { App, Plugin } from "vue";
-import * as components from "./components";
+import * as components from "./packages";
 import "./styles/index.scss";
 import { forIn } from "lodash-es";
 
@@ -13,5 +13,5 @@ const createES = () => ({
   },
 });
 
-export * from "./components";
+export * from "./packages";
 export { createES };
