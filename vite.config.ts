@@ -25,7 +25,7 @@ export default defineConfig({
   build: {
     lib: {
       entry: resolve(__dirname, "src/index.ts"),
-      name: "es-ui",
+      name: "es",
       fileName: module => `es-ui.${module}.js`,
     },
     rollupOptions: {
