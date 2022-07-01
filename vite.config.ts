@@ -47,6 +47,7 @@ export default defineConfig({
   resolve: {
     alias: {
       "@": resolve(__dirname, "src"),
+      "es-ui": resolve(__dirname, "src/packages"),
     },
   },
 });
