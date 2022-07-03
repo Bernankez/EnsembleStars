@@ -15,10 +15,10 @@ export default {
 };
 </script>
 <script setup lang="ts">
-import { computed, inject, unref } from "vue";
+import { computed, ComputedRef, inject, unref } from "vue";
 import { assign } from "lodash-es";
 import { Dark } from "@/types";
-import { buttonProps } from "./types";
+import { buttonProps, ButtonTheme, ButtonType } from "./types";
 import { createNamespace } from "@/utils";
 import { buttonTheme, buttonType } from "./theme";
 
@@ -29,8 +29,10 @@ const _inject_dark = inject(Dark, undefined);
 const dark = computed(() => props.dark ?? unref(_inject_dark));
 const theme = computed(() =>
   assign({}, buttonTheme.default, buttonTheme[props.theme], unref(dark) ? buttonTheme.dark : {}, props.customTheme)
-);
-const type = computed(() => assign({}, buttonType.primary, buttonType[props.type]));
+) as ComputedRef<Required<ButtonTheme>>;
+const type = computed(() => assign({}, buttonType.primary, buttonType[props.type])) as ComputedRef<
+  Required<ButtonType>
+>;
 const width = computed(() => (props.block ? { width: "100%" } : { width: "auto" }));
 const styles = computed(() => assign({}, unref(theme), unref(type), unref(width)));
 </script>

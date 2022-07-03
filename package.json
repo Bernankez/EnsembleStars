@@ -75,7 +75,7 @@
     "vite-plugin-dts": "^1.2.0",
     "vitepress": "1.0.0-alpha.4",
     "vitest": "^0.16.0",
-    "vue": "^3.2.37",
+    "vue": "3.2.26",
     "vue-tsc": "^0.38.1"
   },
   "peerDependencies": {

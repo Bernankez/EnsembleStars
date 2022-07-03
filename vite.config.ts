@@ -13,8 +13,8 @@ export const userConfigBase: UserConfig = {
       entryRoot: "src",
       staticImport: true,
       insertTypesEntry: true,
-      // skipDiagnostics: false,
-      // logDiagnostics: true,
+      skipDiagnostics: false,
+      logDiagnostics: true,
     }),
   ],
   test: {
