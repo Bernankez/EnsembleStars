@@ -2,6 +2,8 @@ node_modules
 target
 build
 dist
+es
+lib
 package-lock.json
 .git
 .mvn

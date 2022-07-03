@@ -3,26 +3,31 @@
   "version": "0.0.2",
   "description": "An EnsembleStars Style UI Component Library built on Vue3",
   "license": "MIT",
-  "main": "dist/es-ui.umd.js",
-  "module": "dist/es-ui.es.js",
-  "types": "dist/index.d.ts",
+  "main": "lib/index.cjs.js",
+  "module": "es/index.es.js",
+  "unpkg": "dist/index.umd.js",
+  "types": "es/index.d.ts",
   "exports": {
     ".": {
       "import": "./dist/es-ui.es.js",
       "require": "./dist/es-ui.umd.js"
-    },
-    "./dist/style.css": "./dist/style.css"
+    }
   },
   "files": [
     "dist",
+    "lib",
+    "es",
     "volar.d.ts"
   ],
   "scripts": {
     "prepare": "husky install",
     "dev": "vite",
-    "build": "pnpm run clean && vue-tsc --noEmit && vite build",
+    "build": "pnpm run clean && vue-tsc --noEmit && pnpm run build:esm && pnpm run build:cjs && pnpm run build:umd",
+    "build:esm": "vite build --config vite.config.esm.ts",
+    "build:cjs": "vite build --config vite.config.cjs.ts",
+    "build:umd": "vite build --config vite.config.umd.ts",
     "preview": "vite preview",
-    "clean": "rimraf dist",
+    "clean": "rimraf dist es lib",
     "test": "vitest",
     "test:once": "vitest run",
     "coverage": "vitest run --coverage",
@@ -51,6 +56,7 @@
     "@vitejs/plugin-vue": "^2.3.3",
     "autoprefixer": "^10.4.7",
     "c8": "^7.11.3",
+    "deepmerge": "^4.2.2",
     "eslint": "^8.18.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-vue": "^9.1.1",
