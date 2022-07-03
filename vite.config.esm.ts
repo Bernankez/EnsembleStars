@@ -12,7 +12,7 @@ const esmConfig = {
     rollupOptions: {
       output: {
         preserveModules: true,
-        preserveModulesRoot: "src/packages",
+        preserveModulesRoot: "src",
         entryFileNames: `[name].es.js`,
       },
     },

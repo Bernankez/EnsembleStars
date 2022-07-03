@@ -9,11 +9,12 @@ import { resolve } from "path";
 export const userConfigBase: UserConfig = {
   plugins: [
     vue(),
-    // dts({
-    //   outputDir: "dist",
-    //   staticImport: true,
-    //   insertTypesEntry: true,
-    // }),
+    dts({
+      staticImport: true,
+      insertTypesEntry: true,
+      // skipDiagnostics: false,
+      // logDiagnostics: true,
+    }),
   ],
   test: {
     environment: "happy-dom",

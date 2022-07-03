@@ -12,7 +12,7 @@ const cjsConfig = {
     rollupOptions: {
       output: {
         preserveModules: true,
-        preserveModulesRoot: "src/packages",
+        preserveModulesRoot: "src",
         entryFileNames: `[name].cjs.js`,
       },
     },

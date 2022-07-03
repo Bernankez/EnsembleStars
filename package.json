@@ -9,9 +9,10 @@
   "types": "es/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/es-ui.es.js",
-      "require": "./dist/es-ui.umd.js"
-    }
+      "import": "./es/index.es.js",
+      "require": "./lib/index.cjs.js"
+    },
+    "./style.css": "./es/style.css"
   },
   "files": [
     "dist",
