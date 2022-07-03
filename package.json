@@ -45,8 +45,7 @@
     ]
   },
   "dependencies": {
-    "lodash-es": "^4.17.21",
-    "vue": "^3.2.37"
+    "lodash-es": "^4.17.21"
   },
   "devDependencies": {
     "@testing-library/vue": "^6.6.0",
@@ -76,9 +75,10 @@
     "vite-plugin-dts": "^1.2.0",
     "vitepress": "1.0.0-alpha.4",
     "vitest": "^0.16.0",
+    "vue": "^3.2.37",
     "vue-tsc": "^0.38.1"
   },
   "peerDependencies": {
-    "vue": "^3.0.0"
+    "vue": "^3.2.0"
   }
 }

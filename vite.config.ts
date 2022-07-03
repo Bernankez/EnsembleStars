@@ -10,6 +10,7 @@ export const userConfigBase: UserConfig = {
   plugins: [
     vue(),
     dts({
+      entryRoot: "src",
       staticImport: true,
       insertTypesEntry: true,
       // skipDiagnostics: false,
